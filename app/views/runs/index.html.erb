@@ -1,0 +1,7 @@
+<h1>Runs</h1>
+<h2><%= link_to("New run", new_run_path) %></h2>
+
+
+<% for run in @runs %>
+  <h3><%= link_to(run.name, run_path(run)) %></h3>
+<% end %>

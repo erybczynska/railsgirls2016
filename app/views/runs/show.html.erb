@@ -1,0 +1,7 @@
+<h4><%= @run.name %></h4>
+  <p><%= @run.date %></p>
+  <p><%= @run.city %></p>
+  <p><%= @run.distance %></p>
+
+  <p><%= link_to("Edit this run", edit_run_path(@run)) %></p>
+  <p><%= link_to("Back to all runs", runs_path) %></p>
