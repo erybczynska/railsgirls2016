@@ -2,9 +2,27 @@
 
 <% if current_user %>
     <h2><%= link_to("New run", new_run_path) %></h2>
-<% end %>   
-
-
-<% for run in @runs %>
-  <h3><%= link_to(run.name, run_path(run)) %></h3>
 <% end %>
+
+<table class="table">
+  <thead>
+       <tr>
+           <th>Name</th>
+           <th>Date</th>
+           <th>City</th>
+           <th>Distance</th>
+           <th>Actions</th>
+       </tr>
+   </thead>
+   <tbody>
+<% for run in @runs %>
+  <tr>
+    <td><%= link_to(run.name, run_path(run)) %></td>
+    <td><%= run.date %></td>
+    <td><%= run.city %></td>
+    <td><%= run.distance %></td>
+    <td><%= link_to "Delete", run_path(run), method: :delete %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
