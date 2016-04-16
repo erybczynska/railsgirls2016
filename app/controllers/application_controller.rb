@@ -8,14 +8,14 @@ class ApplicationController < ActionController::Base
   def authenticate_user(username, password)
     user = User.where(:username => username, :password => password).first
     if user
-      @current_user = user
+      session[:user] = user.id
     else
-      @current_user = nil
+      session[:user] = nil
     end
   end
 
   def current_user
-    @current_user
+    @current_user ||= User.find(session[:user]) if session[:user]
   end
 
 end
