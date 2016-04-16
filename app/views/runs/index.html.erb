@@ -1,5 +1,8 @@
 <h1>Runs</h1>
-<h2><%= link_to("New run", new_run_path) %></h2>
+
+<% if current_user %>
+    <h2><%= link_to("New run", new_run_path) %></h2>
+<% end %>   
 
 
 <% for run in @runs %>
