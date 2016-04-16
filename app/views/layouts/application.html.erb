@@ -16,6 +16,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
+<% if current_user %>
+  <h2>Witaj, <%= current_user.first_name %></h2>
+<% else %>
+ <%= link_to("Log in", signin_path) %>
+ <%= link_to("Sign in", signup_path) %>
+<% end %>
+
 
 <%= yield %>
 

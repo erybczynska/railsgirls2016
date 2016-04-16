@@ -2295,3 +2295,279 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 
 
 Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 15:25:00 +0200
+
+
+Started GET "/runs/new" for ::1 at 2016-04-16 15:27:47 +0200
+Processing by RunsController#new as HTML
+  Rendered runs/new.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/runs/new" for ::1 at 2016-04-16 15:27:49 +0200
+Processing by RunsController#new as HTML
+  Rendered runs/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 26ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/runs" for ::1 at 2016-04-16 15:28:27 +0200
+Processing by RunsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"shsiUhvyCpZAtWFOv/W4501Z5OjN7B4B8P3u/+hEnAbk4OL/Ch3/mdHytHy0aIXAeWdSvVxWErXCk2cYBNmpAw==", "run"=>{"name"=>"Cracovia Maraton", "date"=>"2016-05-15", "city"=>"Kraków", "distance"=>"21"}, "commit"=>"Create Run"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "runs" ("name", "date", "city", "distance", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Cracovia Maraton"], ["date", "2016-05-15"], ["city", "Kraków"], ["distance", 21.0], ["created_at", "2016-04-16 13:28:27.918527"], ["updated_at", "2016-04-16 13:28:27.918527"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/runs/1
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/runs/1" for ::1 at 2016-04-16 15:28:27 +0200
+Processing by RunsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRun Load (0.2ms)[0m  SELECT  "runs".* FROM "runs" WHERE "runs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered runs/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/runs" for ::1 at 2016-04-16 15:28:30 +0200
+Processing by RunsController#index as HTML
+  [1m[36mRun Load (0.1ms)[0m  [1mSELECT "runs".* FROM "runs"[0m
+  Rendered runs/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/runs" for ::1 at 2016-04-16 15:33:50 +0200
+Processing by RunsController#index as HTML
+  [1m[35mRun Load (0.1ms)[0m  SELECT "runs".* FROM "runs"
+  Rendered runs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 15:33:50 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 15:33:50 +0200
+
+
+Started GET "/assets/runs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 15:33:50 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 15:33:50 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 15:33:50 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-16 15:33:50 +0200
+
+
+Started GET "/assets/runs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 15:33:50 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 15:33:50 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-16 15:33:50 +0200
+
+
+Started GET "/runs" for ::1 at 2016-04-16 15:42:02 +0200
+Processing by RunsController#index as HTML
+  [1m[36mRun Load (0.1ms)[0m  [1mSELECT "runs".* FROM "runs"[0m
+  Rendered runs/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/runs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 15:42:02 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 15:42:02 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-16 15:42:02 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 15:42:02 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 15:42:02 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 15:42:02 +0200
+
+
+Started GET "/assets/runs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 15:42:02 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 15:42:02 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-16 15:42:02 +0200
+
+
+Started GET "/signin" for ::1 at 2016-04-16 15:42:04 +0200
+Processing by UsersController#signin as HTML
+  Rendered users/signin.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin" for ::1 at 2016-04-16 15:42:18 +0200
+Processing by UsersController#signin as HTML
+  Rendered users/signin.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for ::1 at 2016-04-16 15:44:14 +0200
+Processing by UsersController#signin as HTML
+  Rendered users/signin.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/runs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 15:44:14 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 15:44:14 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 15:44:14 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-16 15:44:14 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 15:44:14 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 15:44:14 +0200
+
+
+Started GET "/assets/runs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 15:44:14 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 15:44:14 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-16 15:44:14 +0200
+
+
+Started GET "/runs" for ::1 at 2016-04-16 15:44:19 +0200
+Processing by RunsController#index as HTML
+  [1m[35mRun Load (0.2ms)[0m  SELECT "runs".* FROM "runs"
+  Rendered runs/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-16 15:44:22 +0200
+Processing by UsersController#signup as HTML
+  Rendered users/signup.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2016-04-16 15:44:26 +0200
+Processing by UsersController#signup as HTML
+  Rendered users/signup.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signup" for ::1 at 2016-04-16 15:44:51 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h+XdJzO3cGbp1JSLWuDkEx0qYeODANglpafpDkuOrsvRHh2KIliFaXiTQblRfdk0KRTXthK61JGXyWDppxObzg==", "user"=>{"first_name"=>"Ala", "last_name"=>"Kowalska ", "username"=>"alunia", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("first_name", "last_name", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Ala"], ["last_name", "Kowalska "], ["username", "alunia"], ["password", "haslo"], ["created_at", "2016-04-16 13:44:51.594893"], ["updated_at", "2016-04-16 13:44:51.594893"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-16 15:44:51 +0200
+Processing by RunsController#index as HTML
+  [1m[35mRun Load (0.3ms)[0m  SELECT "runs".* FROM "runs"
+  Rendered runs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/runs/new" for ::1 at 2016-04-16 15:44:56 +0200
+Processing by RunsController#new as HTML
+  Rendered runs/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 25ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/runs" for ::1 at 2016-04-16 15:44:58 +0200
+Processing by RunsController#index as HTML
+  [1m[36mRun Load (0.1ms)[0m  [1mSELECT "runs".* FROM "runs"[0m
+  Rendered runs/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin" for ::1 at 2016-04-16 15:45:00 +0200
+Processing by UsersController#signin as HTML
+  Rendered users/signin.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin" for ::1 at 2016-04-16 15:45:07 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pST8+Mo8af4bjR4QM8i0vY2QmPmfDTgmSAiuroukyH/z3zxV29Oc8YrKyyI4VYmaua4urA63NJJ6ZidJZzn9eg==", "user"=>{"username"=>"alunia", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? AND "users"."password" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["username", "alunia"], ["password", "haslo"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-16 15:45:07 +0200
+Processing by RunsController#index as HTML
+  [1m[36mRun Load (0.1ms)[0m  [1mSELECT "runs".* FROM "runs"[0m
+  Rendered runs/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-04-16 15:45:30 +0200
+Processing by RunsController#index as HTML
+  [1m[35mRun Load (0.2ms)[0m  SELECT "runs".* FROM "runs"
+  Rendered runs/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/runs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 15:45:30 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-16 15:45:30 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 15:45:30 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-16 15:45:30 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-16 15:45:30 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 15:45:30 +0200
+
+
+Started GET "/assets/runs.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 15:45:30 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 15:45:30 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-16 15:45:30 +0200
+
+
+Started GET "/signin" for ::1 at 2016-04-16 15:45:32 +0200
+Processing by UsersController#signin as HTML
+  Rendered users/signin.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/signin" for ::1 at 2016-04-16 15:45:37 +0200
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JkbonCn4GwbrFG+NVJppRbVAEOXBW3bmi+/trH3X2fBwvSgxOBfuCXpTur9fB1RigX6msFDhelK5gWRLkUrs9Q==", "user"=>{"username"=>"alunia", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? AND "users"."password" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["username", "alunia"], ["password", "haslo"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-04-16 15:45:37 +0200
+Processing by RunsController#index as HTML
+  [1m[35mRun Load (0.1ms)[0m  SELECT "runs".* FROM "runs"
+  Rendered runs/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.2ms)
