@@ -1,0 +1,7 @@
+<%= form_for(User.new, url: login_user_path) do |form| %>
+  <p><%= form.label("username") %></p>
+  <p><%= form.text_field("username") %></p>
+  <p><%= form.label("password") %></p>
+  <p><%= form.password_field("password") %></p>
+  <p><%= form.submit %></p>
+<% end %>
