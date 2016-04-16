@@ -15,4 +15,9 @@ class UsersController < ApplicationController
     authenticate_user(user_params['username'], user_params['password'])
     redirect_to(root_path)
   end
+
+  def logout
+    logout_user
+    redirect_to(root_path)
+  end
 end

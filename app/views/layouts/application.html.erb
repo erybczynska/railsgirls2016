@@ -18,6 +18,7 @@
 <body>
 <% if current_user %>
   <h2>Witaj, <%= current_user.first_name %></h2>
+  <%= link_to("Logout", logout_path) %>
 <% else %>
  <%= link_to("Log in", signin_path) %>
  <%= link_to("Sign in", signup_path) %>
